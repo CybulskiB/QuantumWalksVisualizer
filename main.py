@@ -6,9 +6,10 @@ import ui.graph as graph_creator
 import ui.algorithm as algorithm_creator
 import ui.runner as algorithm_runner
 import ui.designer as diagram_designer
+import algorithms.handler as handler
 
 functions = [menu.display,instruction.display,graph_creator.display,algorithm_creator.display, 
-             algorithm_runner.display,diagram_designer.display]
+             algorithm_runner.display,diagram_designer.display, handler.run_algorithm]
 
 if __name__ == "__main__":
     clear_console.run()
