@@ -17,7 +17,10 @@ def display(message):
         case "1":
             plt.title("Diagram from Designer")
             for plot in plots:
-                plt.scatter(list(plot[0].keys()),list(plot[0].values()),label=plot[1])
+                if plot[2] == "Plot":
+                    plt.plot(list(plot[0].keys()),list(plot[0].values()),label=plot[1])
+                else:
+                    plt.scatter(list(plot[0].keys()),list(plot[0].values()),label=plot[1])
             plt.xlabel("Positions")
             plt.ylabel("Frequency")
             plt.legend()
@@ -28,7 +31,7 @@ def display(message):
             return(gc.diagram_designer_id,[""])
         case "3":
             name = input("Specify series name")
-            plots.append((alg.last_result,name))
+            plots.append((alg.last_result,name,alg.last_display_method))
             return(gc.diagram_designer_id,[""])
         case "4":
             return(gc.menu_id,[""])

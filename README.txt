@@ -7,5 +7,7 @@ Technical details:
     Python Version: 3.8.8 
 
  Project Structure: 
- setup.py initial file - for use just type in terminal
-    python setup.py 
+ main.py initial file - for use just type in terminal
+
+ Start program:
+python main.py 
