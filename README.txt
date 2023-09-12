@@ -11,3 +11,7 @@ Technical details:
 
  Start program:
 python main.py 
+
+TODO
+
+TESTS!

@@ -21,12 +21,12 @@ def display(message):
         case "2": 
             ui.algorithm_name = "Discrete Quantum Walk Math"
             ui.algorithm_id = gc.discrete_quantum_walk_math_id
-            if coin.state == "Undefined":
-                coin.set(0)
+            coin.set(0)
             return (gc.algorithm_creator_id,["Press specified number for program behaviour"])
         case "3":
             ui.algorithm_name = "Discrete Quantum Walk Qiskit"
             ui.algorithm_id = gc.discrete_quantum_walk_id
+            coin.set(0)
             return (gc.algorithm_creator_id,["Press specified number for program behaviour"])
         case "4":
             return (gc.algorithm_creator_id,["Algorithm Name : " + str(ui.algorithm_name) + "\n"

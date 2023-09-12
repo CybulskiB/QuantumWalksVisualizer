@@ -7,7 +7,7 @@ def display(message,print_res):
         ui.print_alg_results()
     print("1.Set number of steps")
     print("2.Set number of trials")
-    print("3.Specify Quantum Environment (only for quantum algorithms)")
+    print("3.Specify Quantum Environment")
     print("4.Print current config")
     print("5.Run Algorithm")
     print("6.Print results of the last algorithm")
@@ -40,7 +40,7 @@ def display(message,print_res):
                                         "Number of steps : " + str(ui.steps) + "\n" + 
                                         "Number of Trials :" + str(ui.trials) + "\n",False])
         case "5": return(gc.run_algorithm_id,[ui.algorithm_id,ui.initial_pos,ui.steps,ui.trials])
-        case "6": return(gc.algorithm_runner_id,["",False])
+        case "6": return(gc.algorithm_runner_id,["",True])
         case "7":
             return(gc.menu_id,[""])
         case _:
