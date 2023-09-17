@@ -17,7 +17,6 @@ algorithm_id = "Undefined"
 #Components from Algorithm Runner
 steps = 0
 trials = 0 
-
 #Function for printing results
 
 def print_alg_results():
