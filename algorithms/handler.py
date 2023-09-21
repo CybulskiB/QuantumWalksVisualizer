@@ -42,8 +42,9 @@ def run_algorithm(algorithm_id,initial_pos,steps,trials):
                     if len(bin(ui.ending_vertex - ui.beginnig_vertex)) -2 > 6:
                         return(gc.algorithm_runner_id,["You can use only 6 qubits for position",False])
                     else:
-                        job_id = quantum_walk.solve_line(initial_pos,steps,trials,ui.beginnig_vertex,ui.ending_vertex,
+                        job_id,diff = quantum_walk.solve_line(initial_pos,steps,trials,ui.beginnig_vertex,ui.ending_vertex,
                                                                     True,alg.ibm_token)
+                        alg.lasy_job_id = job_id
                         path = os.path.realpath(__file__)
                         dir = os.path.dirname(path)
                         dir = dir.replace("algorithms", "jobs")
@@ -59,7 +60,8 @@ def run_algorithm(algorithm_id,initial_pos,steps,trials):
                                         "Beginnig " : ui.beginnig_vertex,
                                         "Ending " : ui.ending_vertex,
                                         "Initial Pos" : initial_pos,
-                                        "Initial Coin" : str(coin.state)
+                                        "Initial Coin" : str(coin.state),
+                                        "Difference" : str(diff)
                                     }
                                     json_content["jobs"].append(results)
                                     file.seek(0)

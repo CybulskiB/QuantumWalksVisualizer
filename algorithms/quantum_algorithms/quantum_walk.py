@@ -53,7 +53,7 @@ def solve_line(initial_pos,steps,trials,beginnig_vertex,ending_vertex,is_real_qu
         provider = IBMProvider()
         backend  = provider.get_backend('ibm_perth')
         job = execute(qc,backend ,shots = 20000)
-        return job.job_id()
+        return job.job_id(), diff
     else:
         backend = Aer.get_backend('qasm_simulator')
         job = qiskit.execute(qc,backend,shots=trials)

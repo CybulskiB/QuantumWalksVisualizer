@@ -7,7 +7,8 @@ algorithm_runner_id = 4
 diagram_designer_id = 5
 run_algorithm_id = 6
 quantum_env_id = 7
-quit_id = 8
+jobs_loader_id =8
+quit_id = 9
 #IDs for algorithms
 discrete_random_walk_id =  1
 discrete_quantum_walk_math_id = 2

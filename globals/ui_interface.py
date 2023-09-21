@@ -8,6 +8,7 @@ initial_pos = "Undefined"
 vertices = "Undefined"
 beginnig_vertex = "Undefined"
 ending_vertex = "Undefined"
+difference = "Undefined"
 edges = "Undefined"
 
 #Components from Algorithm Creator

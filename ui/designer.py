@@ -11,7 +11,8 @@ def display(message):
     print("1.Show current diagram")
     print("2.Show latest algorithm result")
     print("3.Add latest algorithm to diagram")
-    print("4.Back to menu")
+    print("4.Load result from Quantum Lab")
+    print("5.Back to menu")
     choice = input()
     match choice:
         case "1":
@@ -34,6 +35,8 @@ def display(message):
             plots.append((alg.last_result,name,alg.last_display_method))
             return(gc.diagram_designer_id,[""])
         case "4":
+            return(gc.jobs_loader_id,["Welcome in graph creator, press specified number for program behaviour"])
+        case "5":
             return(gc.menu_id,[""])
         case _:
             return(gc.diagram_designer_id,["You selected bad option"])
